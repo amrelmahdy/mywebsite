@@ -1,0 +1,293 @@
+/* Etra Small */
+
+@media (max-width: 348px){
+
+	.name{
+		font-size: 40px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 25px;
+	}
+    
+    .info p{
+    	font-size: 18px !important;
+    }
+
+
+	.head{
+		height: 980px !important;
+	}
+
+	.contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+}
+
+
+@media (min-width: 349px) and (max-width: 372px){
+	.name{
+		font-size: 45px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 30px;
+	}
+    
+    .info p{
+    	font-size: 22px !important;
+    }
+   
+	.head{
+		height: 1030px !important;
+	}
+
+	.contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+}
+
+
+@media (min-width: 373px) and (max-width: 423px){
+    .name{
+		font-size: 40px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 30px;
+	}
+    
+    .info p{
+    	font-size: 18px !important;
+    }
+
+
+	.portfolio .filter-list li{
+		font-size: 13px;
+	}
+
+	.head{
+		height: 1015px !important;
+	}
+
+	.contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+}
+
+
+@media (min-width: 424px) and (max-width: 508px){
+	.name{
+		font-size: 46px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 32px;
+	}
+    
+    .info p{
+    	font-size: 18px !important;
+    }
+
+	.head{
+		height: 975px !important;
+	}
+}
+
+@media (min-width: 509px) and (max-width: 537px){
+    .name{
+		font-size: 45px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 35px;
+	}
+    
+    .info p{
+    	font-size: 22px !important;
+    }
+
+
+	.head{
+		height: 965px !important;
+	}
+
+	.contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+
+}
+
+
+@media (min-width: 538px) and (max-width: 599px){
+	.name{
+		font-size: 45px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 35px;
+	}
+    
+    .info p{
+    	font-size: 22px !important;
+    }
+
+	.head{
+		height: 1010px !important;
+	}
+
+	.about .info-box{
+		height: auto !important;
+	}
+
+
+	.overlay .social i{
+		margin-bottom: 35px
+	}
+
+	#portfolio .mix{
+    	height: auto;
+    }
+
+	.new-project .form{
+		margin-top: 180px !important;
+	}
+
+	.about .info-box {
+        height: auto !important;
+        padding: 15px;
+    }
+
+    .contact .contact-me-on{
+    	left: 0;
+    	top: 0;
+	    margin-bottom: 50px;
+    }
+    .contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+}
+
+
+
+@media (min-width: 600px) and (max-width: 767px){
+    .name{
+		font-size: 55px !important;
+		margin-top: 130px;
+	}
+
+	.info .job-title{
+		font-size: 38px;
+	}
+    
+    .info p{
+    	font-size: 22px !important;
+    }
+
+	.head{
+		height: 980px !important;
+	}
+
+	.about .info-box {
+        height: auto !important;
+        padding: 15px;
+    }
+
+     #portfolio .mix{
+    	height: auto;
+    }
+
+    .contact .contact-me-on{
+    	left: 0 !important;
+    	top: 0 !important;
+	    margin-bottom: 50px;
+    }
+
+    
+}
+
+
+/* Small screens */
+@media (min-width:768px) and (max-width: 991px){
+	.head {
+       height: 1036px !important;
+    }
+
+    .about .photo img{
+    	height: auto !important;
+    }
+
+    .about .info-box {
+        height: auto !important;
+        padding: 15px;
+    }
+    #portfolio .mix{
+    	height: auto;
+    }
+    .contact .contact-me-on{
+    	left: 0;
+    	top: 0;
+	    margin-bottom: 50px;
+    }
+}
+
+
+/* Medium scrrens */
+@media (min-width:992px) and (max-width: 1999px){
+	.name{
+		font-size: 75px !important;
+	}
+
+	.info .job-title{
+		font-size: 45px;
+	}
+
+	.info p{
+    	font-size: 25px !important;
+    }
+    .head{
+    	height: 660px !important;
+    }
+}
+
+
+/* Large screens */
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+@media (min-width: 1200px){
+	
+}
+
+
+
+@media (min-width: 1100px){
+	.name{
+		font-size: 78px !important;
+	}
+
+	.info .job-title{
+		font-size: 46px;
+	}
+
+	.head{
+		height: 660px !important;
+	}
+}

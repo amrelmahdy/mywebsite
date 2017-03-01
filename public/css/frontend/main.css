@@ -1,0 +1,701 @@
+body{
+	height: 10000px
+	background-color: #EFECE9;
+}
+
+
+h1, h2{
+	font-size: 80px;
+	font-family: 'Ravi Prakash', cursive;
+	font-family: 'Ravi Prakash', cursive;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Orbitron', sans-serif;
+	font-family: 'Passion One', cursive;
+}
+
+.line-under{
+	margin-bottom: 60px;
+}
+
+
+.orange{
+	color: #EF5C4B;
+}
+
+
+.brown{
+	color: #2A1F1D;
+}
+
+.line-under{
+	position: relative;
+	letter-spacing: 2px;
+}
+
+.line-under:after{
+	position: absolute;
+	content: '';
+	width: 10px;
+	border-bottom: 5px solid #EF5C4B;
+	top: 80px;
+    left: 0;
+    width: 40px
+}
+
+.form form input{
+	margin-bottom: 10px;
+}
+
+/* navbar */
+
+.navbar-fixed-top{
+   /* left: 15px;
+    right: 15px;
+    top: 30px;*/
+    z-index: 1000000;
+    background-color: #FFF;
+    border: none;
+    border-radius: 5px;
+}
+
+/*.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+*/
+
+
+.navbar-toggle .icon-bar{
+	background-color: #333;
+}
+
+.navbar-fixed-top .navbar-nav>li>a{
+	color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color: transparent;
+}
+
+.navbar-brand{
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.navbar-brand>img{
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+/* Head Area */
+
+.head{
+	background-image: url('../../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFF;
+}
+
+.head .overlay{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(41, 31, 29, 0.7);
+}
+
+.head .contact-info{
+	background-color: transparent;
+	float: right;
+	margin-right: 30px;
+	padding: 5px;
+}
+
+.head .contact-info li{
+	float: left;
+	margin-left: 10px;
+}
+
+.head .contact-info li a{
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+
+
+.info{
+	margin-top: 15%;
+	font-weight: bold;
+}
+
+
+.info h1{
+	color: #ef5c4b;
+	font-size: 80px;
+	font-family: 'Ravi Prakash', cursive;
+	font-family: 'Ravi Prakash', cursive;
+	font-family: 'Anton', sans-serif;
+	font-family: 'Orbitron', sans-serif;
+	font-family: 'Passion One', cursive;
+
+}
+
+
+.info .job-title{
+	font-family: 'Changa One', cursive;
+    font-family: 'Paytone One', sans-serif;
+	font-size: 50px;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+
+.info p{
+	font-size: 27px;
+    margin-bottom: 35px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.info p span{
+	color: #EF5C4B;
+}
+
+.new-project .form{
+	margin-top: 130px;
+	background-color: #EEEBE8;
+	padding: 30px;
+	opacity: 0.8;
+}
+
+
+.new-project .form:hover{
+	opacity: 1.0;
+}
+
+
+
+.new-project .form h2{
+	margin-top: 0;
+}
+
+
+.new-project .form [type='text'], .new-project .form [type='email'], .new-project .form select, .new-project .form textarea{
+	margin-bottom: 10px;
+	border: 0;
+	border-radius: 0;
+	background-color: #FBFCFC;
+	border-bottom: 2px solid #FFF;
+	font-weight: bold;
+	font-size: 15px;
+	/*-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;*/
+}
+
+
+.new-project .form textarea{
+	color: #D3D3C8;
+}
+
+.new-project .form textarea{
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+.form-control{
+	-webkit-transition: border 0.15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+	/*-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;*/
+}
+
+.form-control:focus{
+	border-bottom: 2px solid #EF5C4B !important;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+
+}
+
+.new-project h2{
+	color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Changa One', cursive;
+    font-family: 'Paytone One', sans-serif;
+    font-family: 'Sintony', sans-serif;
+
+}
+
+
+.btn-spec{
+	background-color: #2a1f1d;
+	border: 1px solid #2a1f1d;;
+	padding: 10px;
+	-webkit-transition: background-color 0.3s ease-in-out !important;
+	font-weight: bold;
+	font-size: 18px;
+	border: 0;
+}
+
+.btn-spec:hover{
+	background-color: #EF5C4B;
+}
+
+.overlay .social li{
+	float: left;
+	margin-bottom: 30px;
+}
+
+
+.overlay .social li a{
+	color: #FFF;
+	background-color: #ef5c4b;
+	padding: 15px;
+	margin: 3px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.overlay .social li a:hover{
+	background-color: #FFF;
+	color: #ef5c4b;
+}
+
+/* Head Area */
+
+
+
+/* About */
+.about{
+	background-color: #F9F7F4;
+}
+
+.about h1{
+	margin: 50px 0 60px;
+}
+
+
+.about .info-box{
+	padding: 0;
+	height: 390px;
+}
+
+.about .basic-info{
+	background-color: #EF5C4B;
+	color: #FFF;
+	padding: 30px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+
+.about .basic-info span{
+	font-size: 16px;
+	color: #333;
+}
+
+.about .basic-info p{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.about .basic-info p:last-child{
+	margin-bottom: 0;
+}
+
+.about .photo{
+	height: 100%;
+}
+
+.about .photo img{
+	width: 100%;
+	height: 100%;
+}
+
+.about .skills{
+	background-color: #2A1F1D;
+	padding: 20px;
+	color: #FFF;
+}
+
+
+.about .skills .skill .progress{
+	height: 3px;
+	margin-top: 10px;
+}
+
+.about .skills .skill .progress .progress-bar{
+	background-color: #EF5C4B !important;
+	
+}
+/* About */
+
+
+
+/* Statistics */
+.statistics{
+	background-color: #2A1F1D;
+	color: #FFF;
+	padding: 60px 0 0px;
+	margin: 70px 0 50px;
+	text-align: center;
+}
+
+.statistics span{
+	display: block;
+	font-size: 30px;
+	padding: 20px 0;
+	color: #EF5C4B;
+}
+
+.statistics p{
+	/*font-family: 'Julius Sans One', sans-serif;*/
+	font-size: 16px;
+	margin-bottom: 60px;
+
+}
+/* Statistics */
+
+
+/* Services */
+.services{
+	margin-bottom: 80px;
+	background-color: #EFECE9;
+	padding-bottom: 50px;
+}
+
+.services h1{
+	margin-bottom: 60px;
+}
+
+.services .service{
+	text-align: center;
+	background-color: #FFF;
+	padding: 10px;
+	border: 1px solid #EEE;
+	border-bottom: 3px solid #EF5C4B;
+	transition: all 0.3s ease-in-out;
+	margin-bottom: 20px;
+}
+
+.services .service h3{
+	color: #333;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.services .service i{
+   margin: 20px 0;
+   color: #333
+}
+
+
+.services .service:hover{
+	background-color: #2A1F1D;
+	box-shadow: 0 20px 20px #888;
+	color: #FFF;
+	border: 0;
+	margin-top: -5px;
+	border-bottom: 3px solid #EF5C4B;
+}
+
+
+.services .service:hover h3, 
+.services .service:hover i,
+.services .service:hover p{
+	color: #FFF;
+}
+
+.services .service p{
+	color: #8a8787;
+}
+
+
+
+/* Services */
+
+
+/* Portfolio */
+
+.portfolio{
+	background-color: #F9F7F4;
+	margin-bottom: 50px;
+}
+
+.portfolio .filter-list{
+	margin-bottom: 40px;
+}
+
+.portfolio .filter-list li{
+	float: left;
+	margin-right: 15px;
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+
+.portfolio .filter-list li:hover{
+	color: #EF5C4B;
+	cursor: pointer;
+	
+}
+
+.portfolio .filter-list .active{
+	color: #EF5C4B;
+	border-bottom: 2px solid #EF5C4B;
+}
+
+#portfolio .mix{
+	display: none;
+	margin-bottom: 20px;
+	height: 250px;
+}
+
+
+#portfolio .mix .project-image{
+	height: 100%;
+	box-shadow: 11px 8px 10px #aaa7b0;
+	position: relative;
+	
+}
+
+
+
+#portfolio .mix .project-image .overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(90, 93, 115, 0.7);
+	display: none
+}
+#portfolio .mix .project-image .overlay .overlay-header{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(239, 92, 75, 0.8);
+    top: 0;
+    z-index: 111111111111111111111;
+}
+
+#portfolio .mix .project-image:hover .overlay{
+	display: block;
+	text-align: center;
+}
+
+
+#portfolio .mix .project-image .overlay strong{
+	display: block;
+    margin-top: 27%;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#portfolio .mix .project-image .overlay p{
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+
+#portfolio .mix .project-image .overlay strong, #portfolio .mix .project-image .overlay p{
+	color: #FFF;
+	text-shadow: 1px 1px #333;
+}
+
+#portfolio .mix .project-image .overlay .btn-primary{
+	background-color: rgba(239, 92, 75, 0.8);
+	border-color: #D66259;
+	font-weight: bold;
+	transition: background-color 0.3s ease-in-out;
+}
+
+
+#portfolio .mix .project-image .overlay .btn-primary:hover{
+	background: none;
+	color: #FFF;
+	border-color: #D66259;
+}
+
+#portfolio .mix .project-image img{
+	width: 100%;
+	height: 100%;
+}
+
+/* Portfolio */
+
+
+/* Resume */
+.resume{
+	background-color: #EFECE9;
+	padding-bottom: 50px;
+}
+
+.resume h3{
+	font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.resume .company-name{
+	font-weight: bold;
+	font-size: 16px;
+	color: #EF5C4B;
+}
+
+
+.resume .experience span, .resume .education span{
+	display: block;
+	padding: 5px 0;
+}
+
+.resume strong{
+	color: #EF5C4B;
+	font-weight: bold;
+}
+
+.resume .experience, .resume .education{
+	padding: 20px 10px;
+	border-bottom: 3px solid #EF5C4B;
+	margin-bottom: 15px;
+}
+
+.resume .experience{
+	background-color: #FFF;
+	
+}
+
+
+.resume .btn-download{
+	margin-top: 30px;
+	background: #EF5C4B;
+	color: #FFF;
+	background-color: #EF5C4B;
+	color: #FFF;
+	border: 2px solid #EF5C4B;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.resume .btn-download:hover{
+	background: none;
+	color: #EF5C4B;
+	border: 2px solid #EF5C4B;
+}
+
+.resume .education{
+	background-color: #2A1F1D;
+	color: #FFF;
+	
+}
+/* Resume */
+
+
+
+/* Contact */
+.contact{
+
+}
+
+.contact #map{
+ 	overflow: hidden;
+ 	width: 100%;
+}
+
+.contact .contact-me-on{
+	position: relative;
+    top: 47px;
+    left: -55px;
+	background-color: #2A1F1D;
+	color: #FFF;
+	padding: 20px 40px 40px;
+}
+
+
+
+.contact .contact-me-on h3{
+	font-size: 40px;
+    font-weight: bold;
+    margin-top: 0px
+}
+
+.contact .contact-me-on p{
+	margin-bottom: 0;
+}
+
+.contact .contact-me-on span{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+
+
+.contact .contact-me-on hr{
+	border: 1px solid #333;
+	margin: 12px 0;
+}
+
+.contact .contact-me-on .social li{
+	float: left;
+	margin-right: 0 !important;
+	margin-bottom: 15px;
+}
+
+
+.contact .contact-me-on .social li a{
+	color: #FFF;
+	background-color: #ef5c4b;
+	padding: 8px;
+	margin: 3px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease-in-out;
+}
+.contact .contact-me-on .social li a:hover{
+	background-color: #FFF;
+	color: #ef5c4b;
+}
+
+/* Contact */
+
+
+/* Footer */
+.footer{
+	background-color: #2A1F1D;
+	padding: 30px;
+	position: relative;
+	margin-top: 60px;
+}
+
+.footer p{
+	color: #FFF;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.footer i{
+	color: #333;
+	background-color: #FFF;
+	padding: 7px 13px;
+	border-radius: 5px;
+	position: absolute;
+	top: -25px;
+	font-weight: bold;
+}
+
+.footer i:hover{
+	color: #EF5C4B;
+	cursor: pointer;
+}
+
+
+/* Footer */
