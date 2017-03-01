@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Education;
 use App\Http\Requests\EducationRequest;
 use Flashy;
-use File;
 
 class EducationController extends Controller
 {
