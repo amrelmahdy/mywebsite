@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Sample;
+use App\Http\Requests\SampleRequest;
+use Flashy;
+use File;
+use Super;
 
 class SampleController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -26,7 +35,7 @@ class SampleController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.samples.create');
     }
 
     /**
@@ -35,21 +44,19 @@ class SampleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SampleRequest $request)
     {
-        //
+       // upload image
+        $image  = $request->file('image');
+        $imageName = Super::uploadImage($image, 'images/portfolio', 1000);
+        $sample = Sample::create($request->all());
+        $sample->image = $imageName;
+        $sample->update();
+        Flashy::message('Sample added successfully');
+        return redirect()->route('samples.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -59,7 +66,8 @@ class SampleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sample = Sample::find($id);
+        return view('admin.samples.edit', compact('sample'));
     }
 
     /**
@@ -69,9 +77,21 @@ class SampleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SampleRequest $request, $id)
     {
-        //
+        $sample = Sample::find($id);
+        $sample->update($request->all());
+        if($request->file('image')) {
+            // Deleted old image
+            File::delete(getcwd() . '/images/portfolio/' . $sample->image);
+            // upload image
+            $image = $request->file('image');
+            $imageName = Super::uploadImage($image, 'images/portfolio', 1000);
+            $sample->image = $imageName;
+            $sample->update();
+        }
+        Flashy::message('Sample updated successfully');
+        return redirect()->route('samples.index');
     }
 
     /**
@@ -82,6 +102,13 @@ class SampleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $sample = Sample::find($id);
+        if(!$sample){
+            Flashy::error('Sample Not Found');
+            return redirect()->back();
+        }
+        $sample->delete();
+        Flashy::message('Sample deleted successfully');
+        return redirect()->back();
     }
 }

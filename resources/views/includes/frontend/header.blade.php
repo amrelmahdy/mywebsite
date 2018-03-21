@@ -11,4 +11,4 @@
 {!! Html::style('css/frontend/media.css') !!}
 @yield('styles')
 
-@yield('extrastyles')
+@yield('extrascripts')

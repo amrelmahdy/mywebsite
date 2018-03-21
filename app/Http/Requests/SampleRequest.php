@@ -13,7 +13,7 @@ class SampleRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,21 @@ class SampleRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        if( $this->method() == 'PATCH'){
+            return [
+                'project_name' => 'required',
+                'category_id' => 'required',
+                'description' => 'required',
+                'link'  => 'required',
+            ];
+        } else {
+            return [
+                'project_name' => 'required',
+                'category_id' => 'required',
+                'description' => 'required',
+                'image' => 'required',
+                'link'  => 'required',
+            ];
+        }
     }
 }

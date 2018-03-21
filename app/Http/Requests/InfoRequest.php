@@ -35,6 +35,7 @@ class InfoRequest extends FormRequest
             'happy_clients' => 'required|alpha_num',
             'experience_years' =>'required|alpha_num',
             'countries_served' =>'required|alpha_num',
+            'map_pin' =>'required',
 
         ];
     }

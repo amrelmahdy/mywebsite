@@ -73,7 +73,7 @@ class FactoryGenerator
 
     public function getSortedFiles()
     {
-        $iter = \File_Iterator_Factory::getFileIterator($this->path, '.php');
+        $iter = \File_Iterator_Factory::getFileIterator($this->path, 'SuperRepo.php');
         $files = array();
         foreach ($iter as $file) {
             $files[] = $file;

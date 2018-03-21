@@ -14,7 +14,7 @@ h1, h2{
 }
 
 .line-under{
-	margin-bottom: 60px;
+	margin : 50px 0;
 }
 
 
@@ -52,10 +52,14 @@ h1, h2{
    /* left: 15px;
     right: 15px;
     top: 30px;*/
-    z-index: 1000000;
+    z-index: 10000111111111111111111100;
     background-color: #FFF;
     border: none;
     border-radius: 5px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: transparent !important;
 }
 
 /*.navbar .navbar-nav {
@@ -81,8 +85,10 @@ h1, h2{
 }
 
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+.navbar-fixed-top .navbar-nav>.active>a, .navbar-fixed-top .navbar-nav>.active>a:focus, .navbar-fixed-top .navbar-nav>.active>a:hover
+,.navbar-fixed-top .navbar-nav>li>a:hover{
 	background-color: transparent;
+	color: #EF5C4B;
 }
 
 .navbar-brand{
@@ -107,6 +113,7 @@ h1, h2{
 	background-image: url('../../images/bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	color: #FFF;
 }
 
@@ -115,7 +122,7 @@ h1, h2{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(41, 31, 29, 0.7);
+	background-color: rgba(41, 31, 29, 0.5);
 }
 
 .head .contact-info{
@@ -175,7 +182,7 @@ h1, h2{
 .new-project .form{
 	margin-top: 130px;
 	background-color: #EEEBE8;
-	padding: 30px;
+	padding: 30px 30px  10px 30px;
 	opacity: 0.8;
 }
 
@@ -204,7 +211,7 @@ h1, h2{
 
 
 .new-project .form textarea{
-	color: #D3D3C8;
+	/*color: #D3D3C8;*/
 }
 
 .new-project .form textarea{
@@ -323,7 +330,7 @@ h1, h2{
 
 .about .skills{
 	background-color: #2A1F1D;
-	padding: 20px;
+	padding: 23px;
 	color: #FFF;
 }
 
@@ -346,7 +353,7 @@ h1, h2{
 	background-color: #2A1F1D;
 	color: #FFF;
 	padding: 60px 0 0px;
-	margin: 70px 0 50px;
+	margin: 70px 0 0px;
 	text-align: center;
 }
 
@@ -478,7 +485,8 @@ h1, h2{
 	top: 0;
 	left: 0;
 	background-color: rgba(90, 93, 115, 0.7);
-	display: none
+	display: none;
+	z-index: 100;
 }
 #portfolio .mix .project-image .overlay .overlay-header{
     position: absolute;

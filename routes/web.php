@@ -12,12 +12,17 @@
 */
 
 Route::get('/', 'Frontend\PagesController@index')->name('home');
-Route::get('/resume/download/{name}', [
-		'uses' => 'Admin\PagesController@downloadResume',
-		'as'   => 'resume.download', 
-]);
-// Admin Authentication
+
+Route::post('/qoute', 'Frontend\PagesController@postQoute')->name('postQoute');
+
+
+// Admin Routes
 Route::group(['prefix' => 'admin'], function(){
+
+	Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+    Route::post('/login', 'Auth\LoginController@login')->name('postLogin');
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 	Route::get('/', [
 		'uses' => 'Admin\AdminController@index',
 		'as'   => 'dashboard'
@@ -25,10 +30,8 @@ Route::group(['prefix' => 'admin'], function(){
 
 	// Education 
 	Route::resource('educations', 'Admin\EducationController');
-
 	// Experience 
 	Route::resource('experiences', 'Admin\ExperienceController');
-
 	// Profile
 	Route::get('/profile', [
 		'uses' => 'Admin\ProfileController@index',
@@ -52,5 +55,5 @@ Route::group(['prefix' => 'admin'], function(){
 
 	// Samples
 	Route::resource('/samples', 'Admin\SampleController');
-
+    Route::resource('/skills', 'Admin\SkillController');
 });

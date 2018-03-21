@@ -13,7 +13,7 @@
 	     <h1 class="text-center">Dashboard</h1>
 	  </div>
 
-	  <div class="row">
+	  {{-- <div class="row">
 
 		<div class="space-6"></div>
 
@@ -53,7 +53,7 @@
 
 			
 
-	{{-- 		<div class="infobox infobox-orange2">
+			<div class="infobox infobox-orange2">
 				<div class="infobox-icon">
 					<i class="ace-icon fa fa-building"></i>
 				</div>
@@ -63,7 +63,7 @@
 					<div class="infobox-content">Total Pages</div>
 				</div>
 			</div>
- --}}
+
 
 			<div class="space-6"></div>
 
@@ -100,7 +100,7 @@
 				</div>
 			</div>
 		</div>
-	  </div>
+	  </div> --}}
   </div>
 @stop
 

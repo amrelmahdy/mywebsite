@@ -17,7 +17,7 @@ class CreateTableSkills extends Migration
             $table->increments('id');
             $table->string('skill');
             $table->string('percentage');
-            $table->boolean('viewed');
+            $table->boolean('viewed')->default(0);
             $table->timestamps();
         });
     }

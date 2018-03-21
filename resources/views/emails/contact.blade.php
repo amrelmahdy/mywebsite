@@ -13,10 +13,7 @@
 			box-shadow: 0 0 20px #c1bebe;
 		}
 
-		.header{
-			overflow: hidden;
-			background-color: #eaeaea;
-		}
+
 
 		.header h2 {
 		    width: 30%;
@@ -67,22 +64,17 @@
      <div class="container">
         <div class="content">
 	     	<div class="header">
-	     	    <h2>Contact Message</h2>
-	     	    <div class="logo">
-	     	        <img src="https://s27.postimg.org/yb4sytmqr/small_logo.png" alt="" width="90" height="90">
-	     	    </div>
+	     	    <h2>New Qoute</h2>
 		     </div>
 		     <div class="msg">
-		         <h4>Contact Message | {{ $data['inquiry'] }}</h4>
-		         <p>{{ $data['message'] }}</p>
-		         
+		         <h4>Contact Message From :  {{ $data['name'] . ' <' . $data["email"] .'>' }}</h4>
+		         <p>{{ $data['project'] }}</p>
+
 		          <hr>
 
 		          <address>
 		          	<p><strong>Sent From    : </strong></strong><span>{{ $data['email'] }}</span></p>
 		          	<p><strong>Sener Name   : </strong></strong><span>{{ $data['name'] }}</span></p>
-		          	<p><strong>Mobile   : </strong></strong><span>{{ $data['mobile'] }}</span></p>
-		          	<p><strong>Inquiry : </strong></strong><span>{{ $data['inquiry'] }}</span></p>
 		          </address>
 		     </div>
 		     <div class="footer"></div>

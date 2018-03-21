@@ -36,16 +36,16 @@
 
 		<li {{ Request::is('admin/experiences*') ? 'class=active' : '' }}>
 			<a href="{{ url('admin/experiences') }}">
-				<i class="menu-icon fa fa-ravelry"></i>
+				<i class="menu-icon fa fa-briefcase"></i>
 				<span class="menu-text"> Experience </span>
 			</a>
 
 			<b class="arrow"></b>
 		</li>
 
-		<li {{ Request::is('admin/speakers*') ? 'class=active' : '' }}>
-			<a href="">
-				<i class="menu-icon fa fa-user-o"></i>
+		<li {{ Request::is('admin/samples*') ? 'class=active' : '' }}>
+			<a href="{{ route('samples.index') }}">
+				<i class="menu-icon fa fa-google-wallet"></i>
 				<span class="menu-text"> Samples </span>
 			</a>
 
@@ -53,8 +53,8 @@
 		</li>
 
 
-		<li {{ Request::is('admin/events*') || Request::is('admin/galleries*') ? 'class=active' : '' }}>
-			<a href="">
+		<li {{ Request::is('admin/skills*') || Request::is('admin/galleries*') ? 'class=active' : '' }}>
+			<a href="{{ route('skills.index') }}">
 				<i class="menu-icon fa fa-gift"></i>
 				<span class="menu-text"> Skills </span>
 			</a>
@@ -62,33 +62,6 @@
 			<b class="arrow"></b>
 		</li>
 
-
-		<li {{ Request::is('admin/agendas*') ? 'class=active' : '' }}>
-			<a href="">
-				<i class="menu-icon fa fa-file-o"></i>
-				<span class="menu-text"> Social </span>
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-
-		<li {{ Request::is('admin/agendas*') ? 'class=active' : '' }}>
-			<a href="">
-				<i class="menu-icon fa fa-file-o"></i>
-				<span class="menu-text"> Statistic </span>
-			</a>
-
-			<b class="arrow"></b>
-		</li>
-
-		<li {{ Request::is('admin/agendas*') ? 'class=active' : '' }}>
-			<a href="">
-				<i class="menu-icon fa fa-file-o"></i>
-				<span class="menu-text"> Contact </span>
-			</a>
-
-			<b class="arrow"></b>
-		</li>
 
 
 		{{-- 

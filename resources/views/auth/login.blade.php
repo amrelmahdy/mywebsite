@@ -6,9 +6,9 @@
    <div class="dev-page-login-block">
 	    <div class="dev-page-login-block__form">
 	        <div class="logo">
-	       	  <img src="{{ asset('images/frontend/logo/logo_footer.png') }}" style="height: 85px;width: 65%;" alt="logo" />
+	       	 {{-- <img src="{{ asset('images/frontend/logo/logo_footer.png') }}" style="height: 85px;width: 65%;" alt="logo" />--}}
 	        </div>
-	        {!! Form::open(['route' => 'adminPostLogin']) !!}                        
+	        {!! Form::open(['route' => 'postLogin']) !!}
 	            <div class="form-group">
 	                <div class="input-group  {!! $errors->has('email') ? 'white-border' : '' !!}">
 	                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -29,7 +29,7 @@
 	        {!! Form::close() !!}
 	    </div>
 	    <div class="dev-page-login-block__footer">
-	        &copy; <strong> Developed by Fekrety Online Integrated Solutions.</strong>
+	       {{-- &copy; <strong> Developed by Me.</strong>--}}
 	    </div>
 	</div>
 @stop

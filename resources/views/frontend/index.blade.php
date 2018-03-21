@@ -8,7 +8,10 @@
 
    <link href="https://fonts.googleapis.com/css?family=Changa+One|Paytone+One|Sintony" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+   {{ Html::style('css/frontend/parsley.css') }}
 @stop
+
+
 
 
 
@@ -32,33 +35,26 @@
                     <p>
                        Hello, I'm a <span>PHP Developer</span> Expert from Egypt. I love everything that makes our life easier.
                     </p>
-
-                    <div class="social">
-                      <ul class="list-unstyled">
-                        @foreach($social_media as $social)
-                            <li><a href="{{ $social->link }}"><i class="fa {{ $social->icon }} fa-fw"></i></a></li>
-                        @endforeach
-                      </ul>
-                   </div>
+                    @include('includes.frontend.social')
                 </div>
 
                 <div class="col-md-5 col-md-offset-1 new-project">
                     <div class="form">
                         <h2>Want to discuss a new project ? </h2>
-                      {!! Form::open() !!}
-                         <div class="form-group-lg"> 
-                             {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Your Name']) }}
+                      {!! Form::open(['route' => 'postQoute', 'data-parsley-validate' => '']) !!}
+                         <div class="form-group-lg">
+                             {{ Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Your Name', 'required' => 'required']) }}
                          </div>
                            <div class="form-group-lg">
-                             {{ Form::text('email', null, ['class' => 'form-control', 'placeholder' => 'Your Email']) }}
+                             {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Your Email', 'required' => 'required']) }}
                          </div>
 
                          <div class="form-group-lg">
-                             {{ Form::select('type', ['Website', 'System'], null, ['class' => 'form-control', 'placeholder' => 'Project Type']) }}
+                             {{ Form::select('type', ['Website' => 'Website', 'Web System' => 'Web System'], null, ['class' => 'form-control', 'placeholder' => 'Project Type', 'required' => 'required']) }}
                            </div>
 
                            <div class="form-group-lg">
-                             {{ Form::textarea('project', null, ['class' => 'form-control', 'rows' => '4', 'placeholder' => 'Project Description']) }}
+                             {{ Form::textarea('project', null, ['class' => 'form-control', 'rows' => '2', 'placeholder' => 'Project Description', 'required' => 'required']) }}
                            </div>
 
                          {{ Form::submit('Send', ['class' => 'btn btn-primary btn-block btn-spec']) }}
@@ -72,10 +68,6 @@
        </div>
    </div>
 @stop
-
-
-
-
 
 <!-- Start page Content -->
 @section('content')
@@ -98,7 +90,7 @@
                     <span class="label">Email</span>
                     <p>
                       @foreach($emails as $email)
-                         {{ $email }} 
+                         {{ $email }}
                          <br>
                       @endforeach
                     </p>
@@ -119,7 +111,6 @@
               <div class="col-md-4 info-box">
                 <div class="skills">
                   @foreach($skills as $skill)
-
                     @if($skill->viewed == true)
                       <div class="skill">
                         <h6>
@@ -203,25 +194,22 @@
             <div class="service">
                 <i class="fa fa-code fa-5x"></i>
               <h3>Web Devlopment</h3>
-              <p>Praesent fringilla ex at massa consectetur finibus. Nulla rutrum nibh in accumsan venenatis. Duis laoreet est nec molestie volutpat</p>
+              <p>Create a professional website and get your business online, build an effective, responsive and dynamic website.</p>
             </div>
           </div>
-
-
-
           <div class="col-md-4">
-            <div class="service">
-                <i class="fa fa-wordpress fa-5x"></i>
-              <h3>Word Press</h3>
-              <p>Praesent fringilla ex at massa consectetur finibus. Nulla rutrum nibh in accumsan venenatis. Duis laoreet est nec molestie volutpat</p>
-            </div>
+              <div class="service">
+                  <i class="fa fa-briefcase fa-5x"></i>
+                  <h3>Web Applications</h3>
+                  <p>Web Applications are crafted and developed professionally to meet needs identified in your organization.</p>
+              </div>
           </div>
 
           <div class="col-md-4">
             <div class="service">
-                <i class="fa fa-briefcase fa-5x"></i>
-              <h3>Web System</h3>
-              <p>Praesent fringilla ex at massa consectetur finibus. Nulla rutrum nibh in accumsan venenatis. Duis laoreet est nec molestie volutpat</p>
+                <i class="fa fa-apple fa-5x"></i>
+              <h3>Mobile Application</h3>
+              <p>We develop customized mobile applications that are tailored professionally to your business both Android and IOS</p>
             </div>
           </div>
         </div>
@@ -250,6 +238,7 @@
 
          <div id="portfolio" class="row">
            @foreach($samples as $sample)
+               {{--{{ dd($samples)  }}--}}
            <div class="mix {{ $sample->category->filter_name }} col-md-4">
               <div class="project-image">
                 <div class="overlay">
@@ -273,7 +262,7 @@
 
    <!-- Resume --> 
 
-   <section class="resume" class="resume">
+   <section class="resume" id="resume">
 
        <div class="container">
          <h1 class="line-under"><span class="orange">R</span><span class="brown">esume</span></h1>
@@ -292,7 +281,7 @@
                     <p>{!! $experiences[$i]['description'] !!}</p>
                 </div>
               @endfor
-              <a href="{{ route('resume.download', $info->resume) }}" class="btn btn-download"><i class="fa fa-download"></i> Download</a>
+              <a href="{{ url('documents/resume/' . $info->resume ) }}" download="" class="btn btn-download"><i class="fa fa-download"></i> Download</a>
           </div>
 
           <div class="col-md-6">
@@ -320,48 +309,25 @@
          <h1 class="line-under"><span class="orange">C</span><span class="brown">ontact</span></h1>
           <div class="row">
               <div class="col-md-6">
-                 <div id="map" class="thumbnail" style="width:100%;height:500px"></div>
-                      <script>
-                        function initMap() {
-                          var uluru = {lat: 30.0566, lng: 31.3301};
-                          var map = new google.maps.Map(document.getElementById('map'), {
-                            zoom: 15,
-                            center: uluru
-                          });
-                          var marker = new google.maps.Marker({
-                            position: uluru,
-                            map: map
-                          });
-                        }
-                      </script>
-                      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_OSQoL-sbAh-pmQEyQ6Jyg_Oh9nECqs&callback=initMap">
-                      </script>
+                 <div id="map" class="thumbnail" style="width:100%;height:500px">
+                     {!!  $info->map_pin !!}
                  </div>
+              </div>
 
                <div class="col-md-6">
                 <div class="contact-me-on">
                   <h3>Contact me</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore adipisci excepturi dolorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     I look forward to working with you, contact me and get you website done quickly and professionally, thanks fro you trust.
                   </p>
                   <hr>
                     @if(count($info) > 0)
                       <span><i style="margin-right: 10px" class="fa fa-envelope fa-lg"></i> {{ explode('/', $info->email)[0] }}
-
                       <hr>
-
                       <span><i style="margin-right: 10px" class="fa fa-phone fa-lg"></i> +2{{ $info->mobile }}</span>
-                     
                       <hr style="margin-bottom: 22px;">
                     @endif
-                    <div class="social">
-                      <ul class="list-unstyled">
-
-                        @foreach($social_media as $social)
-                           <li><a href="{{ $social->link }}" target="_blank"><i class="fa {{ $social->icon }} fa-fw"></i></a></li>
-                        @endforeach 
-                      </ul>
-                   </div>
+                    @include('includes.frontend.social')
                    <div class="clearfix"></div>
                 </div>
               </div>
@@ -371,4 +337,8 @@
 
    <!-- Contact --> 
 
+@stop
+
+@section('scripts')
+    {{ Html::script('js/frontend/parsley.js') }}
 @stop

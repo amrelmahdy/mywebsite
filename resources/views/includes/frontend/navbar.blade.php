@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="{{ asset('images/logo/logo.png') }}" alt="Amr El Mahdy">
       </a>
     </div>
@@ -16,12 +16,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
+       {{-- <li class="active"><a href="#" data-scroll="home">Home</a></li>--}}
+        <li><a href="#about" data-scroll="about">About</a></li>
+        <li><a href="#services" data-scroll="services">Services</a></li>
+        <li><a href="#portfolio" data-scroll="portfolio">Portfolio</a></li>
+        <li><a href="#resume" data-scroll="resume">Resume</a></li>
+        <li><a href="#contact" data-scroll="contact">Contact</a></li>
       </ul>
       
     </div><!-- /.navbar-collapse -->

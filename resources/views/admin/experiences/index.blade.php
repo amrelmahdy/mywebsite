@@ -54,8 +54,9 @@
 								            <div class="btn-group control-icon">
 												<a href="{{ route('experiences.edit', $experience->id) }} "><i class="ace-icon fa fa-pencil bigger-120  edit" data-id=""></i></a>
 												@if(count($experiences) != 1)
-													<a href="#"><i class="ace-icon fa fa-trash-o bigger-120  delete" data-id="{{ $experience->id }}"></i></a>
-											    @endif
+													<a href="#" data-toggle="modal" data-target="#modal-confirm{{ $experience->id }}"><i class="ace-icon fa fa-trash-o bigger-120  delete"></i></a>
+
+												@endif
 										    </div>
 										</td>
 									</tr>
@@ -91,17 +92,7 @@
 @stop
 
 @section('scripts')
-    <script type="text/javascript">
-      $(document).ready(function(){
-          var URL   = "{{ url('/') }}";
-        $(document).on('click', '.delete', function(event){
-          event.preventDefault();
-          id = $(event.target).data('id');
-          jQuery.noConflict(); 
-          $('#modal-confirm' + id).modal();
-        });
-      });
-    </script>
+
 	{!! Html::script('js/admin/jquery.dataTables.min.js') !!}
 	{!! Html::script('js/admin/jquery.dataTables.bootstrap.min.js') !!}
 	{!! Html::script('js/admin/smart-tables.js') !!}

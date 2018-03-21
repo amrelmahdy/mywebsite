@@ -1,6 +1,6 @@
 @extends('layouts.admin.admin-master')
 
-@section('title', 'Events')
+@section('title', 'My profile')
 
 @section('styles')
    {!! Html::style('css/admin/events.css') !!}
@@ -120,7 +120,70 @@
 						<div class="profile-info-name">Resume</div>
 
 						<div class="profile-info-value">
-							<span class="editable" id="login"><a href="{{ route('profile.resume.download', $info->resume) }}" class="btn btn-success btn-xs">Download <i class="fa fa-download"></i></a></span>
+							<span class="editable" id="login"><a href="{{ url('documents/resume/'. $info->resume ) }}" class="btn btn-success btn-xs">View <i class="fa fa-download"></i></a></span>
+						</div>
+					</div>
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Facebook</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->facebook }}</a> </span>
+						</div>
+					</div>
+
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Twitter</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->twitter }}</a> </span>
+						</div>
+					</div>
+
+
+
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Linkedin</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->linkedin }}</a> </span>
+						</div>
+					</div>
+
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Instagram</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->instagram }}</a> </span>
+						</div>
+					</div>
+
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Google + </div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->google }}</a> </span>
+						</div>
+					</div>
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Github</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->github }}</a> </span>
+						</div>
+					</div>
+
+
+					<div class="profile-info-row">
+						<div class="profile-info-name">Bitbucket</div>
+
+						<div class="profile-info-value">
+							<span class="editable label label-info" id="login"><a href="#">{{  $info->bitbucket }}</a> </span>
 						</div>
 					</div>
 

@@ -1,6 +1,6 @@
 @extends('layouts.admin.admin-master')
 
-@section('title', 'Create Eperience')
+@section('title', 'Create Experience')
 
 @section('styles') 
    {!! Html::style('css/admin/form.css') !!}

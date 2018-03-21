@@ -12,6 +12,10 @@ use File;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        return $this->middleware('auth');
+    }
     public function index(){
         $info = Info::find(1);
     	return view('admin.profile.index')->withInfo($info);

@@ -50,7 +50,7 @@
 										<td class="center">
 								            <div class="btn-group control-icon">
 												<a href="{{ route('educations.edit', $education->id) }} "><i class="ace-icon fa fa-pencil bigger-120  edit" data-id=""></i></a>
-												<a href="#"><i class="ace-icon fa fa-trash-o bigger-120  delete" data-id="{{ $education->id }}"></i></a>
+												<a href="#" data-toggle="modal" data-target="#modal-confirm{{ $education->id }}"><i class="ace-icon fa fa-trash-o bigger-120  delete"></i></a>
 												
 										    </div>
 										</td>
@@ -86,17 +86,6 @@
 @stop
 
 @section('scripts')
-    <script type="text/javascript">
-      $(document).ready(function(){
-          var URL   = "{{ url('/') }}";
-        $(document).on('click', '.delete', function(event){
-          event.preventDefault();
-          id = $(event.target).data('id');
-          jQuery.noConflict(); 
-          $('#modal-confirm' + id).modal();
-        });
-      });
-    </script>
 	{!! Html::script('js/admin/jquery.dataTables.min.js') !!}
 	{!! Html::script('js/admin/jquery.dataTables.bootstrap.min.js') !!}
 	{!! Html::script('js/admin/smart-tables.js') !!}

@@ -19,7 +19,7 @@ class CreateTableExperiences extends Migration
             $table->string('job_title');
             $table->date('start_date');
             $table->date('end_date')->default(Carbon\Carbon::now()->toDateString());
-            $table->string('description');
+            $table->text('description');
             $table->boolean('current')->default(false);
             $table->timestamps();
         });
